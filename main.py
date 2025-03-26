@@ -82,6 +82,7 @@ def encrypt():
         img = input("Podaj nazwe obrazka(PNG): ")
         try:
             image = Image.open(img + '.png', 'r')
+            image = image.convert("RGB")
         except:
             print("No i gdzie ten obrazek?")
         else:
@@ -131,6 +132,7 @@ def decrypt():
         img = input("Podaj nazwe obrazka(PNG): ")
         try:
             image = Image.open(img + ".png", 'r')
+            image = image.convert("RGB")
         except:
             print("No i gdzie ten obrazek?")
         else:
